@@ -61,3 +61,11 @@ E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\runtimes\win-arm\native\e_s
 E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
 E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
 E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
