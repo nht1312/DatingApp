@@ -1,4 +1,4 @@
-<div class="card mb-4" *ngIf="member">
+<!-- <div class="card mb-4" *ngIf="member">
     <div class="card-img-wrapper">
         <img src="{{member.photoUrl || './assets/user/png'}}" alt="{{member.knownAs}}" class="card-img-top">
         <ul class="list-inline member-icons animate text-center">
@@ -20,4 +20,23 @@
         </h6>
         <p class="card-text text-muted text-center">{{member.city}}</p>
     </div>
-</div>
+</div> -->
+
+<!-- CARD -->
+<section>
+    <div class="container">
+    	<div class="row">
+    		<div class="col" *ngIf="member">
+    		    <div class="card profile-card-1">
+    		        <img src="{{member.photoUrl || './assets/user/png'}}" alt="{{member.knownAs}}" class="background"/>
+    		        <img src="{{member.photoUrl || './assets/user/png'}}" alt="{{member.knownAs}}" class="profile"/>
+                    <div class="card-content">
+                    <h2>{{member.userName}}<small>Age: {{member.age}}</small></h2>
+                    <div class="icon-block"><a routerLink="/members/{{member.userName}}"><i class="fa fa-user"></i></a><a href="#"> <i class="fa fa-heart"></i> </a><a href="#"> <i class="fa fa-envelope"></i></a></div>
+                    </div>
+                </div>
+                <h4 class="mt-3 w-100 float-left text-center"><strong>{{member.city}}</strong></h4>
+    		</div>
+    	</div>
+    </div>
+</section>
