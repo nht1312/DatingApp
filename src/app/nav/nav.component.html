@@ -1,41 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <div class="container">
-      <a class="navbar-brand" routerLink="/" routerLinkActive="active">DateMate</a>
-      
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <ng-container *ngIf="accountService.currentUser$ | async">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
-            </li>
-            
-          </ng-container>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/errors" routerLinkActive="active">Errors</a>
-          </li>
-        </ul>
-
-        <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-          <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle>Welcome {{user.username | titlecase}}</a>
-          <div class="dropdown-menu mt-3" *dropdownMenu>
-            <a href="" class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
-            <a href="" class="dropdown-item" (click)="logout()">Logout</a>
-          </div>
-        </div>
-
-        <form *ngIf="!(accountService.currentUser$ | async)" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
-          <input name="username" [(ngModel)]="model.username" class="form-control me-2" type="text" placeholder="Username">
-          <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password" placeholder="Password">
-          <button class="btn btn-success" type="submit">Login</button>
-        </form>
-    </div>
-  </nav> -->
-  <!--  -->
   <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">DateMate</a>
@@ -58,7 +20,8 @@
           </li>
         </ul>
         <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-          <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle>Welcome {{user.username | titlecase}}</a>
+          <img src="{{user.photoUrl || './assets/user.png'}}" alt="user photo">
+          <a class="dropdown-toggle text-light text-decoration-none ms-2" dropdownToggle>Welcome {{user.username | titlecase}}</a>
           <div class="dropdown-menu mt-3" *dropdownMenu>
             <a href="" class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
             <a href="" class="dropdown-item" (click)="logout()">Logout</a>
