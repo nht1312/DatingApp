@@ -115,6 +115,7 @@ h1 a{color:#131313; font-weight:bold;}
 }
 .profile-card-1 .icon-block a{
     text-decoration:none;
+    cursor: pointer;
 }
 .profile-card-1 i:hover {
   background-color:#fff;

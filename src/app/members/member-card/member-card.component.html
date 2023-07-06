@@ -28,11 +28,15 @@
     	<div class="row">
     		<div class="col" *ngIf="member">
     		    <div class="card profile-card-1">
-    		        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="background"/>
-    		        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="profile"/>
+    		        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knowAs}}" class="background"/>
+    		        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knowAs}}" class="profile"/>
                     <div class="card-content">
-                    <h2>{{member.userName}}<small>Age: {{member.age}}</small></h2>
-                    <div class="icon-block"><a routerLink="/members/{{member.userName}}"><i class="fa fa-user"></i></a><a href="#"> <i class="fa fa-heart"></i> </a><a href="#"> <i class="fa fa-envelope"></i></a></div>
+                        <h2>{{member.knowAs}}<small>Age: {{member.age}}</small></h2>
+                        <div class="icon-block">
+                            <a routerLink="/members/{{member.userName}}"><i class="fa fa-user"></i></a>
+                            <a (click)="addLike(member)" > <i class="fa fa-heart"></i> </a>
+                            <a> <i class="fa fa-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
                 <h4 class="mt-3 w-100 float-left text-center"><strong>{{member.city}}</strong></h4>
