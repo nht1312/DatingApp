@@ -30,7 +30,7 @@ namespace API.Controllers
                 return BadRequest("UserName is taken");
 
             var user = _mapper.Map<AppUser>(registerDto);
-            using var hmac = new HMACSHA256();
+            using var hmac = new HMACSHA512();
 
             user.UserName = registerDto.UserName.ToLower();
             user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.PassWord));
@@ -42,7 +42,8 @@ namespace API.Controllers
             {
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
-                KnowAs = user.KnowAs
+                KnowAs = user.KnowAs,
+                Gender = user.Gender
 
             };
         }
@@ -67,7 +68,8 @@ namespace API.Controllers
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
                 PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
-                KnowAs = user.KnowAs
+                KnowAs = user.KnowAs,
+                Gender = user.Gender
             };
         }
         
