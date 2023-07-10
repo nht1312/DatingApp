@@ -35,7 +35,10 @@
                         <div class="icon-block">
                             <a routerLink="/members/{{member.userName}}"><i class="fa fa-user"></i></a>
                             <a (click)="addLike(member)" > <i class="fa fa-heart"></i> </a>
-                            <a> <i class="fa fa-envelope"></i></a>
+                            <a 
+                                routerLink="/members/{{member.userName}}"
+                                [queryParams]="{tab: 'Messages'}"
+                                ><i class="fa fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
