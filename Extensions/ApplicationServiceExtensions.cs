@@ -16,11 +16,18 @@ namespace API.Extensions
             //Token
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
+            //Mapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            //Cloudinary
             services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
+            //Photos
             services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<LogUserActivity>();
+            //Likes
             services.AddScoped<ILikeRepository, LikeRepository>();
+            //Messages
+            services.AddScoped<IMessageRepository, MessageRepository>();
+
 
             return services;
         }

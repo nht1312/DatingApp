@@ -18,10 +18,16 @@ namespace API.Entities
         public string LookingFor { get; set; }
         public string Interests { get; set; }
         public string City { get; set; }
+        //Photos
         public List<Photo> Photos { get; set; } = new ();
-
+        //Likes
         public List<UserLike> LikedByUsers { get; set; }
         public List<UserLike> LikedUsers { get; set; }
+        //Messages
+        public List<Message> MessageSent { get; set; }
+        public List<Message> MessageReceived { get; set; }
+
+        
 
     }
 }
