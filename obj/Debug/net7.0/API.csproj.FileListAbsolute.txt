@@ -79,3 +79,4 @@ E:\LEARNING\Source\C#\DatingApp\API\obj\Debug\net7.0\scopedcss\bundle\API.styles
 E:\LEARNING\Source\C#\DatingApp\API\obj\Debug\net7.0\API.csproj.CopyComplete
 E:\LEARNING\Source\C#\DatingApp\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 E:\LEARNING\Source\C#\DatingApp\API\obj\Debug\net7.0\ref\API.dll
+E:\LEARNING\Source\C#\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
