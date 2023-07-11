@@ -83,7 +83,7 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("RecipientDelete")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("RecipientId")
                         .HasColumnType("INTEGER");
