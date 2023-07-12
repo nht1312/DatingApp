@@ -16,16 +16,18 @@ export class NavComponent implements OnInit {
   constructor(public accountService: AccountService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.accountService.currentUser$.subscribe((user: any) => {
-      console.log(user);
-      
-    })
+    // this.accountService.currentUser$.subscribe((user: any) => {
+    //   console.log(user);
+    // })
   }
 
   //login
   login(){
     this.accountService.login(this.model).subscribe({
-      next: () => this.router.navigateByUrl('/members')
+      next: _ => {
+        this.router.navigateByUrl('/members')
+        this.model = {};
+      }
     })
   }
   //logout

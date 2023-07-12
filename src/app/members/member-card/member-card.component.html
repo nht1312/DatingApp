@@ -31,9 +31,16 @@
     		        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knowAs}}" class="background"/>
     		        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knowAs}}" class="profile"/>
                     <div class="card-content">
-                        <h2>{{member.knowAs}}<small>Age: {{member.age}}</small></h2>
+                        <h2>{{member.knowAs}}
+                            <span [class.is-online]="(presenceService.onlineUsers$ | async)?.includes(member.userName)">
+                                •
+                            </span>
+                            <small>Age: {{member.age}}</small>
+                        </h2>
                         <div class="icon-block">
-                            <a routerLink="/members/{{member.userName}}"><i class="fa fa-user"></i></a>
+                            <a routerLink="/members/{{member.userName}}">
+                                <i class="fa fa-user"></i>
+                            </a>
                             <a (click)="addLike(member)" > <i class="fa fa-heart"></i> </a>
                             <a 
                                 routerLink="/members/{{member.userName}}"
