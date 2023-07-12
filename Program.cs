@@ -41,6 +41,8 @@ app.UseAuthorization();
 app.MapControllers();
 //SignalR
 app.MapHub<PresenceHub>("hubs/presence");
+app.MapHub<MessageHub>("hubs/message");
+
 
 //Seed data
 using var scope = app.Services.CreateScope();
