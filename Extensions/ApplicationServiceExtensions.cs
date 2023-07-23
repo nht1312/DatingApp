@@ -16,7 +16,6 @@ namespace API.Extensions
             services.AddCors();
             //Token
             services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<IUserRepository, UserRepository>();
             //Mapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             //Cloudinary
@@ -24,14 +23,12 @@ namespace API.Extensions
             //Photos
             services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<LogUserActivity>();
-            //Likes
-            services.AddScoped<ILikeRepository, LikeRepository>();
-            //Messages
-            services.AddScoped<IMessageRepository, MessageRepository>();
             //SignalR
             services.AddSignalR();
             //action Status
             services.AddSingleton<PresenceTracker>();
+            //Unit of work
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
         }
