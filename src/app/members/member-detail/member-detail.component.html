@@ -1,7 +1,7 @@
 <div class="row" >
     <div class="col-4">
         <div class="card">
-            <img src="{{member.photoUrl || './assets/user/png'}}" alt="{{member.knowAs}}" class="card-img-top img-thumbnail">
+            <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knowAs}}" class="card-img-top img-thumbnail">
             <div class="card-body text-center">
                 <div class="mb-2" *ngIf="(presenceService.onlineUsers$ | async)?.includes(member.userName)">
                     <i class="class fa fa-user-circle text-success"></i> Online Now
